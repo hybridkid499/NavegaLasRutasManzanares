@@ -1,6 +1,1 @@
-Esta es mi preentrega 1 del curso de React (Crea tu landing)
-
-Los componentes creados son:
-- NavBar
-- CartWidget
-- ItemListContainer
+sumado a lo que estaba de la pre entrega 1 ahora se agrego la navegacion corrrespondiente a lo de la entrega 2, con los elementos y productos en cada pagina. tambien agregue un logo como me dijo para la pagina en la devolucion de la primera entrega
