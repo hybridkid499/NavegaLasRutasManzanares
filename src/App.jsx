@@ -1,13 +1,20 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import ItemListContainer from './components/ItemListContainer';
+import ItemListContainer from './containers/ItemListContainer';
+import ItemDetailContainer from './containers/ItemDetailContainer';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <NavBar />
-      <ItemListContainer greeting="Bienvenido a Byte Store" />
-      <h1>Mi tienda React</h1>
-    </>
+
+      <Routes>
+        <Route path="/" element={<ItemListContainer greeting="Bienvenido a Kitsune Wear" />} />
+        <Route path="/category/:categoryId" element={<ItemListContainer greeting="Catálogo filtrado" />} />
+        <Route path="/item/:id" element={<ItemDetailContainer />} />
+        <Route path="*" element={<h2 style={{ padding:16 }}>404 • Página no encontrada</h2>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
